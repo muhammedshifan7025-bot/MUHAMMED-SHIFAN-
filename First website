@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammed Shifan | Football Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+.bg-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    background:#00ff88;
+    border-radius:50%;
+    animation:float 12s linear infinite;
+    opacity:0.2;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) scale(0);
+    }
+    100%{
+        transform:translateY(-100vh) scale(2);
+    }
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#00ff88;
+    text-shadow:0 0 25px #00ff88;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00ff88;
+    }
+    to{
+        text-shadow:0 0 40px #00ff88;
+    }
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:1.2rem;
+    max-width:700px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#00ff88;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #00ff88;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    color:#00ff88;
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(0,255,136,.4);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#aaa;
+}
+
+.highlight{
+    color:#00ff88;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-animation">
+    <span style="left:10%;animation-delay:0s"></span>
+    <span style="left:30%;animation-delay:2s"></span>
+    <span style="left:50%;animation-delay:4s"></span>
+    <span style="left:70%;animation-delay:6s"></span>
+    <span style="left:90%;animation-delay:8s"></span>
+</div>
+
+<section class="hero">
+    <h1>MUHAMMED SHIFAN</h1>
+    <p>
+        Diploma in Electrical Engineering Student • Football Player • Fitness Enthusiast
+    </p>
+
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+        Explore My Journey
+    </button>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card">
+        <p>
+            I'm <span class="highlight">Muhammed Shifan</span>, 19 years old and currently studying
+            <span class="highlight">Diploma in Electrical Engineering (2nd Year)</span>.
+            I am hardworking, disciplined, goal-oriented and passionate about football, fitness and personal growth.
+            My dream is to build a successful career and make my family proud.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Football Journey</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Kerala Blasters U15</h3>
+            <p>Represented the youth setup and competed at a high level.</p>
+        </div>
+
+        <div class="card">
+            <h3>Malappuram Team</h3>
+            <p>Achieved 3rd place in a Kerala zonal football competition.</p>
+        </div>
+
+        <div class="card">
+            <h3>Teams Played For</h3>
+            <p>FA Soccer Kozhikode, Kerala Blasters, Edumartial, Sporthood and Kerala Team.</p>
+        </div>
+
+        <div class="card">
+            <h3>5's Tournament Player</h3>
+            <p>Participated in numerous 5-a-side tournaments and became well known in local football circles.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Strengths</h2>
+
+    <div class="grid">
+
+        <div class="card">⚽ Football Intelligence</div>
+        <div class="card">💪 Fitness & Gym Training</div>
+        <div class="card">🔥 Determination & Discipline</div>
+        <div class="card">🤝 Teamwork & Leadership</div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Recognition</h2>
+
+    <div class="card">
+        <p>
+            Known for exciting performances on the field. Match highlights and football videos showcase
+            dedication, technical ability and impact during important games. Recognized by teammates,
+            coaches and football fans through consistent performances in youth and local competitions.
+        </p>
+    </div>
+</section>
+
+<div class="footer">
+    © 2026 Muhammed Shifan | Football Portfolio
+</div>
+
+</body>
+</html>
